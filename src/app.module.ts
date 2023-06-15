@@ -6,7 +6,7 @@ import { MongooseModule } from '@nestjs/mongoose';
 
 @Module({
   imports: [EkuruModule,
-    MongooseModule.forRoot(`mongodb://${process.env.DB_HOST}:${process.env.DB_PORT}/${process.env.DB_NAME}`),
+    MongooseModule.forRoot(`mongodb://localhost:27017/${process.env.DB_NAME}`),
 ],
   controllers: [AppController],
   providers: [AppService],
